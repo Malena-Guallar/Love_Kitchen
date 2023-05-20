@@ -3,6 +3,12 @@
     <?php include('add.css'); ?>
 </style>
 
+<?php include('bdd.php'); ?>
+
+<?php 
+    session_start();
+    $loggedUser = $_SESSION['loggedUser'];
+?>
 
 
 
@@ -17,12 +23,12 @@
             <br/>
             <div class="name">
                 <label>your name</label>
-                <input id="name" class="name_input" name="name"/>
+                <input type="name" id="name" class="name_input" name="name"/>
             </div>
             <br/>
-            <div class="email">
-                <label>your email</label>
-                <input type="email" id="email" class="email_input" name="email"/>
+            <div class="title">
+                <label>title of recipe</label>
+                <input type="title" id="title" class="title_input" name="title"/>
             </div>
             <br/>
             <div class="recipe">
@@ -36,9 +42,22 @@
         </form>
     </div>
 
+
     <?php
 
-        if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['recipe']) && !empty($_POST['email']) && !empty($_POST['name']) && !empty($_POST['recipe'])) {
+        if (isset($_POST['name']) && isset($_POST['title']) && isset($_POST['recipe']) && !empty($_POST['name']) && !empty($_POST['title']) && !empty($_POST['recipe'])) {
+            
+            
+            $title = $_POST['title'];
+            $recipe = $_POST['recipe'];
+            $name = $_POST['name'];
+
+            $insertRecipe->execute([
+                'title' => $title,
+                'recipe' => $recipe,
+                'author' => $name 
+            ]);
+
 
         } else {
             $errorMessage = 'Veuillez remplir tous les champs svp' ;
@@ -46,13 +65,14 @@
 
         ?>
 
+
 <?php if (isset($errorMessage)): ?>
     <div class="alert_error" role="alert">
         <?php echo $errorMessage ?>
     </div>
 <?php endif; ?>
 
-<?php if (isset($_POST['email']) && isset($_POST['name']) && isset($_POST['recipe']) && !empty($_POST['email']) && !empty($_POST['name']) && !empty($_POST['recipe']) && !isset($errorMessage)): ?>
+<?php if (isset($_POST['title']) && isset($_POST['recipe']) && !empty($_POST['title']) && !empty($_POST['recipe']) && !isset($errorMessage)): ?>
     <div class="alert_container">
         <div class="alert_success" role="alert">
             <p>♥ ♥ ♥</p>

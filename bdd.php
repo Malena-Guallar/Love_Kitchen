@@ -22,5 +22,9 @@ $recipesStatement = $db->prepare($sqlQuery1);
 $recipesStatement->execute();
 $recipes = $recipesStatement->fetchAll();
 
+$sqlQuery3 = 'INSERT INTO recipes(title, recipe, author) VALUES (:title, :recipe, :author)';
+$insertRecipe = $db->prepare($sqlQuery3);
+
+
 ?>
 

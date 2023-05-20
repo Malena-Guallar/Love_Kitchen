@@ -6,6 +6,9 @@
 <?php include('bdd.php'); ?>
 
 
+
+
+
 <?php
     if (isset($_POST['email']) && isset($_POST['password'])) {
         foreach ($users as $user){
@@ -20,6 +23,10 @@
         }
     }
 ?>    
+<?php 
+    session_start();
+    $_SESSION['loggedUser'] = $loggedUser;
+?>
 
 
 <?php if (!isset($loggedUser)): ?>
@@ -51,7 +58,7 @@
     <div class="alert_container">
         <div class="alert_success" role="alert">
             <p>♥ ♥ ♥</p>
-            <p>welcome to Love Kitchen Recipes's</p>
+            <p>welcome to Love Kitchen Recipes'</p>
             <p>find all recipes below or</p>
             <p><a href="add.php">add a recipe</a></p>
             <p>♥ ♥ ♥</p>

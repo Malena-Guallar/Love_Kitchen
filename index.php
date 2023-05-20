@@ -34,37 +34,11 @@
             <?php endif; ?> 
         </div>
 
-        <!-- <div id="myModal" class="modal">
-
-        <div class="modal-content">
-            <div class="modal">
-                <span class="close">&times;</span>
-                     <h2>Modal</h2>
-            </div> -->
 
 
         <footer>
             <?php include_once('footer.php'); ?>
         </footer>
-
-<!-- 
-<script type="text/javascript">
-
-let modal = document.getElementById("myModal")
-
-let btn = document.getElementById("btn"); 
-
-let span = document.getElementById("close")[0] ; 
-
-btn.onclick = function() {
-    modal.style.display = "block" ; 
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-</script> -->
 
     </body>
 </html>
