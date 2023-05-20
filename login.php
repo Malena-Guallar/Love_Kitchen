@@ -6,9 +6,6 @@
 <?php include('bdd.php'); ?>
 
 
-
-
-
 <?php
     if (isset($_POST['email']) && isset($_POST['password'])) {
         foreach ($users as $user){
@@ -23,10 +20,6 @@
         }
     }
 ?>    
-<?php 
-    session_start();
-    $_SESSION['loggedUser'] = $loggedUser;
-?>
 
 
 <?php if (!isset($loggedUser)): ?>

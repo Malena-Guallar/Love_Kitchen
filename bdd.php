@@ -26,5 +26,6 @@ $sqlQuery3 = 'INSERT INTO recipes(title, recipe, author) VALUES (:title, :recipe
 $insertRecipe = $db->prepare($sqlQuery3);
 
 
+
 ?>
 

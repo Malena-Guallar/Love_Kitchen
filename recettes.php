@@ -20,14 +20,21 @@
 
     <?php
 
-    if (isset($_GET['recipe_id'])) {
-        $recipeID = $_GET['recipe_id'];
+   
 
-        echo "<h1>Détails de la recette</h1>";
-        echo "<p>ID de la recette : $recipeID</p>";
-    } else {
-        echo "pas d'ID";
-    }
+
+        $recipeID = $_GET['recipe_id'];
+        $recipeName = $_GET['title'];
+        $recipeAuthor = $_GET['author'];
+        $recipeDetails = $_GET['recipe'];
+
+
+        echo "<h1>$recipeName</h1>";
+        echo "<p>by $recipeAuthor</p>";
+        echo '<p>La recette :</p>';
+        echo "<p>$recipeDetails</p>";
+
+    
 
     ?>
 
