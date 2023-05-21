@@ -1,3 +1,5 @@
+<!--  -->
+
 <style>
     <?php include('login.css'); ?>
     <?php include('index.css'); ?>
@@ -13,7 +15,7 @@
                 $user['email'] == $_POST['email'] &&
                 $user['password'] == $_POST['password']
             ) {
-                $loggedUser = ['email' => $user['email'],];
+                $_SESSION['logged_user'] = $user['email'] ;
             } else {
                 $errorMessage = sprintf('wrong infos love');
             }
@@ -22,7 +24,7 @@
 ?>    
 
 
-<?php if (!isset($loggedUser)): ?>
+<?php if (!isset($_SESSION['logged_user'])): ?>
     <div class="connexion_box">
         <form class="connexion" action="index.php" method="post">
             <?php if (isset($errorMessage)): ?>

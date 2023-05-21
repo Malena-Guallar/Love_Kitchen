@@ -19,10 +19,7 @@
     <?php include_once('bdd.php'); ?>
 
     <?php
-
-   
-
-
+    
         $recipeID = $_GET['recipe_id'];
         $recipeName = $_GET['title'];
         $recipeAuthor = $_GET['author'];
@@ -33,8 +30,6 @@
         echo "<p>by $recipeAuthor</p>";
         echo '<p>La recette :</p>';
         echo "<p>$recipeDetails</p>";
-
-    
 
     ?>
 

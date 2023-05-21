@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <style>
     <?php include('index.css'); ?>
 </style>
@@ -16,7 +18,7 @@
         </header>  
         
         <?php include_once('login.php'); ?>
-        <?php if (isset($loggedUser)): ?>
+        <?php if (isset($_SESSION['logged_user'])): ?>
 
         <div class="recipes_container" >
         <?php include_once('bdd.php'); ?>
