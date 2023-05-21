@@ -20,16 +20,17 @@
                 <form action="submit_message.php" method="POST" enctype="multipart/form-data">
                     <div class="contact_form">
                         <div>
-                            <label for="email">Your email</label>
+                            <label for="email">your email</label>
+                            <br>
+
                             <input type="email" name="email" id="email" />
                         </div>
+                        </br>
                         <div>
-                            <label for="message">Your message</label>
-                            <textarea type ="message" name="message" placeholder="say smth" id="message"></textarea>
-                        </div>
-                        <div>
-                            <label for="file" class="file">Your file</label>
-                            <input type="file" class="file_control" id="screenshot" name="screenshot"/>
+                            <label for="message">your message</label>
+                            <br>
+
+                            <textarea type ="message" name="message" placeholder="say smth" id="message" rows=4 cols=50></textarea>
                         </div>
                     </div>
                     <button class="btn">Send</button>           

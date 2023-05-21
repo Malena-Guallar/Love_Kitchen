@@ -24,7 +24,7 @@
         <?php include_once('bdd.php'); ?>
 
             <?php foreach ($recipes as $recipe) : ?>
-                        <article>
+                        <article class="recipe">
                             <h3><?php echo $recipe['title']; ?></h3>
                             <a href="recettes.php?recipe_id=<?php echo $recipe['recipe_id']; ?>&title=<?php echo urlencode($recipe['title']); ?>&recipe=<?php echo urlencode($recipe['recipe']); ?>&author=<?php echo urlencode($recipe['author']); ?>">
                                 <button>la recette ici</button>

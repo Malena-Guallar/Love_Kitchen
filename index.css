@@ -32,3 +32,14 @@ a {
     text-align: center;
     display: contents;
 }
+
+button {
+    font-family: Montserrat Alternates, sans-serif ;
+    background: transparent;
+    border : none;
+}
+
+.recipe {
+    display: grid;
+
+}
